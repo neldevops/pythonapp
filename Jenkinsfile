@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     
-                    sh  ``` echo 'this is build' ```
+                     echo 'this is build'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    sh ``` echo 'this is deploy' ```
+                     echo 'this is deploy' 
                 }
             }
         }

@@ -4,14 +4,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'this is check out'
+                sh ``` echo 'this is check out' ```
             }
         }
 
         stage('Build') {
             steps {
                 script {
-                    sh 'this is build'
+                    
+                    sh  ``` echo 'this is build' ```
                 }
             }
         }
@@ -19,7 +20,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    sh 'this is deploy'
+                    sh ``` echo 'this is deploy' ```
                 }
             }
         }

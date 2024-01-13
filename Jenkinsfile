@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                    sh 'sudo chown $USER /var/run/docker.sock
+                    sh 'sudo chown $USER /var/run/docker.sock'
                     sh 'sudo docker ps'
                     sh 'sudo docker build --rm -it -p 8000:8000 flaskapp01 .'
                     

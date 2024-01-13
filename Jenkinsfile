@@ -12,9 +12,11 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    
+
+                    sh ```
                     docker ps
-                    docker build --rm -it flaskapp01 .
+                    docker build --rm -it -p 8000:8000 flaskapp01 .
+                    ```
                 }
             }
         }

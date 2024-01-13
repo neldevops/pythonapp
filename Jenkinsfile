@@ -13,7 +13,8 @@ pipeline {
             steps {
                 script {
                     
-                     echo 'this is build'
+                    docker ps
+                    docker build --rm -it flaskapp01 .
                 }
             }
         }
@@ -21,7 +22,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                     echo 'this is deploy' 
+                     
                 }
             }
         }

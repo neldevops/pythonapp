@@ -19,10 +19,10 @@ pipeline {
             }
         }
 
-        // stage('deploy') {
-        //     steps {
-        //        echo 'this is the deploy stage'
-        //     }
-        // }
+        stage('deploy') {
+            steps {
+               sh 'docker run --rm -it -p 8000:8000 flaskapp01 --name flaskapp'
+            }
+        }
     }
 }

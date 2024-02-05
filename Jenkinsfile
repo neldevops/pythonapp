@@ -9,15 +9,15 @@ pipeline {
             }
         }
 
-        // stage('Build') {
-        //     steps {
+        stage('Docker Build') {
+            steps {
                 
-        //             sh 'docker ps'
-        //             sh 'docker build --rm -it -p 8000:8000 flaskapp01 .'
+                    sh 'docker ps'
+                    // sh 'docker build --rm -p 8000:8000 flaskapp01 .'
                     
         
-        //     }
-        // }
+            }
+        }
 
         // stage('deploy') {
         //     steps {

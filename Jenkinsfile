@@ -13,7 +13,7 @@ pipeline {
             steps {
                 
                     sh 'docker ps'
-                    // sh 'docker build --rm -p 8000:8000 flaskapp01 .'
+                    sh 'docker build -t flaskapp01 .'
                     
         
             }

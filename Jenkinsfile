@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                  echo 'this is check out' 
-                checkout scmGit(branches: [[name: '*/test']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/neldevops/pythonapp.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/neldevops/pythonapp.git']])
             }
         }
 

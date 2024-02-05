@@ -11,8 +11,8 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                    sh "m=$(docker ps | awk '{print $1}' | tail -1)" 
-                    sh 'docker stop $m'   
+                    sh "m=\$(docker ps | awk '{print \$1}' | tail -1)" 
+                    sh 'docker stop \$m'   
                     sh 'docker build -t flaskapp01:${BUILD_NUMBER} .'
                     sh 'echo ${BUILD_NUMBER}'
                     

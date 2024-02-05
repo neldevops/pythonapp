@@ -20,6 +20,7 @@ pipeline {
 
         stage('deploy') {
             steps {
+                sh 'docker stop $(docker ps -a -q)'
                sh 'docker run -d --rm -p 8000:8000 flaskapp01:${BUILD_NUMBER}'
             }
         }

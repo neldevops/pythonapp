@@ -25,12 +25,5 @@ pipeline {
             }
         }
      
-    //  stage('cleanup') {
-    //         steps {
-                   
-    //            sh 'docker system prune --all --force'
-    //         }
-    //     }
-
     }
 }
